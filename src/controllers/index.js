@@ -4,7 +4,7 @@ const LogsController = (Log) => ({
 
     try {
         await log.save();
-        res.status(200).send(log);
+        res.sendStatus(200);
     } catch (err) {
         res.status(400).send(err.message);
     }
