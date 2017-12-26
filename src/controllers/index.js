@@ -1,3 +1,5 @@
+import Log from '../models';
+
 const LogsController = (Log) => ({
   async create(req, res) {
     const log = new Log(req.body);
@@ -20,4 +22,4 @@ const LogsController = (Log) => ({
   }
 });
 
-export default LogsController;
+export default LogsController(Log);
