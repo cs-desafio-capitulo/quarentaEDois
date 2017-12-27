@@ -1,8 +1,8 @@
 import Log from '../models';
 
-const LogsController = (Log) => ({
+const LogsController = (Logger) => ({
   async create(req, res) {
-    const log = new Log(req.body);
+    const log = new Logger(req.body);
 
     try {
         await log.save();
@@ -14,7 +14,7 @@ const LogsController = (Log) => ({
 
   async get(req, res) {
     try {
-        const logs = await Log.find({});
+        const logs = await Logger.find({});
         res.status(200).send(logs);
     } catch (err) {
         res.status(400).send(err.message);
