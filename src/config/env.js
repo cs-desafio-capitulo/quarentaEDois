@@ -13,5 +13,5 @@ export default {
   externalServices: {
     productService: process.env.PRODUCT_SERVICE,
     logService: process.env.LOG_SERVICE,
-  }
+  },
 };
